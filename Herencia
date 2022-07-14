@@ -1,0 +1,90 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Cliente cliente = new Cliente();
+        cliente.setEdad(34);
+        cliente.setNombre("Manue");
+        cliente.setTelefono("664527485");
+        cliente.setCredito((float) 24578.85);
+
+        System.out.println("El cliente se llama " + cliente.getNombre() + " tiene " + cliente.getEdad() + " años, " +
+                "numero de telefono " + cliente.getTelefono() + " y tiene un credito de " + cliente.getCredito() + "€");
+
+        Trabajador trabajador = new Trabajador();
+        trabajador.setEdad(47);
+        trabajador.setNombre("Jose");
+        trabajador.setTelefono("669542436");
+        trabajador.setSalario((float) 2674.54);
+
+        System.out.println("El trabajador se llama " + trabajador.getNombre() + " tiene " + trabajador.getEdad() + " años, " +
+                "numero de telefono " + trabajador.getTelefono() + " y tiene un salario de " + trabajador.getSalario() + "€");
+
+    }
+}
+
+class Persona {
+
+    private int edad;
+    private String nombre, telefono;
+
+    public Persona() {
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+}
+
+class Cliente extends Persona {
+
+    private float credito;
+
+    public Cliente (){
+    }
+
+    public float getCredito() {
+        return credito;
+    }
+
+    public void setCredito(float credito) {
+        this.credito = credito;
+    }
+}
+
+class Trabajador extends Persona {
+
+    private float salario;
+
+    public Trabajador(){
+    }
+
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
+
+}
